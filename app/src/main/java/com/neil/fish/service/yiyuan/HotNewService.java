@@ -28,6 +28,13 @@ public interface HotNewService {
     @POST("738-1")
     Observable<YiyuanApiResult<List<HotBean>>> getHotSearchRankList(@Field("n") int page, @Field("showapi_appid") String showapi_appid, @Field("showapi_sign") String showapi_sign);
 
+    /**
+     * 数据结果集包装 ResBodyBean
+     * @param page
+     * @param showapi_appid
+     * @param showapi_sign
+     * @return
+     */
     @FormUrlEncoded
     @POST("738-1")
     Observable<YiyuanApiResult<ResBodyBean>> getHotSearchRank(@Field("n") int page, @Field("showapi_appid") String showapi_appid, @Field("showapi_sign") String showapi_sign);
