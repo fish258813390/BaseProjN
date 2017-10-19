@@ -10,8 +10,8 @@ import com.neil.fish.utils.LogUtils;
 
 /**
  * Created by neil on 2017/10/18 0018.
+ * 提交测试
  */
-
 public class HomePresenter extends BasePresenter<HomeView, HomeModel> {
 
     public void getHotList(int page, String showapi_appid, String showapi_sign) {
