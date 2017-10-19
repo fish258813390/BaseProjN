@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import com.neil.fish.base.app.YiyuanApiResult;
 import com.neil.fish.utils.LogUtils;
 import com.neil.fish.utils.ToastUtils;
+import com.neil.fish.widget.dialog.LoadingDialog;
 
 import java.net.SocketTimeoutException;
 
@@ -23,7 +24,7 @@ public abstract class HttpObserver<T> implements Observer<YiyuanApiResult<T>> {
 
     @Override
     public void onError(Throwable e) {
-//        LoadingUtils.dismiss(); // 全局对话框
+        LoadingDialog.cancelDialogForLoading(); // 全局对话框
         LogUtils.e("onError------>"+e.getMessage());
         if (e instanceof SocketTimeoutException) {
             ToastUtils.showLong("请求超时，稍后再试");
@@ -45,6 +46,8 @@ public abstract class HttpObserver<T> implements Observer<YiyuanApiResult<T>> {
 
     @Override
     public void onNext(YiyuanApiResult<T> t) {
+        LoadingDialog.cancelDialogForLoading(); // 全局对话框
+        LogUtils.d("当前线程:" + Thread.currentThread().getName());
         LogUtils.d("【请求成功，返回数据】--->" + JSON.toJSON(t.getShowapi_res_body()));
         if (t.getShowapi_res_code() == 0) {
             onSuccess(t.getShowapi_res_body());
@@ -52,6 +55,8 @@ public abstract class HttpObserver<T> implements Observer<YiyuanApiResult<T>> {
             onFailure(t.getShowapi_res_error());
         }
     }
+
+
 
     public abstract void onSuccess(T t);
 

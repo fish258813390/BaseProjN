@@ -19,6 +19,7 @@ public class HomePresenter extends BasePresenter<HomeView, HomeModel> {
         mModel.getHotSearchRank(page, showapi_appid, showapi_sign, new HttpObserver<ResBodyBean>() {
             @Override
             public void onSuccess(ResBodyBean result) {
+
                 LogUtils.e("<------回调返回数据---->" + JSON.toJSON(result));
             }
         });
@@ -35,4 +36,15 @@ public class HomePresenter extends BasePresenter<HomeView, HomeModel> {
 //            }
 //        }));
     }
+
+    // 默认retrofit
+    public void getHotListDefault(int page, String showapi_appid, String showapi_sign) {
+        mModel.getHotSearchRankDefault(page, showapi_appid, showapi_sign);
+    }
+
+    // retrofit  + rxjava
+    public void getHotListByRxAndRetrofit(int page, String showapi_appid, String showapi_sign){
+        mModel.getHotSearchByRxAndRetrofit(page,showapi_appid,showapi_sign);
+    }
+
 }
