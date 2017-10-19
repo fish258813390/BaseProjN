@@ -19,6 +19,7 @@ public class HomePresenter extends BasePresenter<HomeView, HomeModel> {
         mModel.getHotSearchRank(page, showapi_appid, showapi_sign, new HttpObserver<ResBodyBean>() {
             @Override
             public void onSuccess(ResBodyBean result) {
+
                 LogUtils.e("<------回调返回数据---->" + JSON.toJSON(result));
             }
         });
