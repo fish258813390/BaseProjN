@@ -6,6 +6,7 @@ import com.neil.fish.entity.ResBodyBean;
 
 import java.util.List;
 
+import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -38,5 +39,16 @@ public interface HotNewService {
     @FormUrlEncoded
     @POST("738-1")
     Observable<YiyuanApiResult<ResBodyBean>> getHotSearchRank(@Field("n") int page, @Field("showapi_appid") String showapi_appid, @Field("showapi_sign") String showapi_sign);
+
+    /**
+     * 基本使用
+     * @param page
+     * @param showapi_appid
+     * @param showapi_sign
+     * @return
+     */
+    @FormUrlEncoded
+    @POST("738-1")
+    Call<YiyuanApiResult<ResBodyBean>> getHotSearchRankDefault(@Field("n") int page, @Field("showapi_appid") String showapi_appid, @Field("showapi_sign") String showapi_sign);
 
 }

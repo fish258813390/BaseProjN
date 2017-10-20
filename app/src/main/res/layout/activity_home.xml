@@ -9,14 +9,20 @@
         android:id="@+id/btn_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试" />
+        android:text="retrofit + rxjava(封装)" />
 
-
-    <TextView
+    <Button
         android:id="@+id/btn_test1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="再测试" />
+        android:text="retrofit" />
+
+
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="retrofit + rxjava(无封装)" />
 
 
 </LinearLayout>

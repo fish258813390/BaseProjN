@@ -5,6 +5,7 @@ package com.neil.fish.http;
 import com.neil.fish.base.app.BaseApplication;
 import com.neil.fish.base.rx.RxSchedulers;
 import com.neil.fish.utils.NetWorkUtils;
+import com.neil.fish.widget.dialog.LoadingDialog;
 
 import rx.Observable;
 

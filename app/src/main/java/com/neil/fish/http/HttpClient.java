@@ -93,6 +93,7 @@ public class HttpClient {
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
 
+            //  获取retrofit对象
             retrofit = new Retrofit
                     .Builder()
                     .baseUrl(getBaseUrl())
