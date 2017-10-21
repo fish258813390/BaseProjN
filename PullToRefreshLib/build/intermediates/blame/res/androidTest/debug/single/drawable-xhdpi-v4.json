@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_loading_progress_pull.png",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_loading_progress_pull.png"
+    },
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
+    }
+]

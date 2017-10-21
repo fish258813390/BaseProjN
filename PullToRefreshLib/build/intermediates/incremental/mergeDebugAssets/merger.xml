@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\droid-as-project\BaseProjN\PullToRefreshLib\src\main\assets"/><source path="E:\droid-as-project\BaseProjN\PullToRefreshLib\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\droid-as-project\BaseProjN\PullToRefreshLib\src\debug\assets"/></dataSet></merger>

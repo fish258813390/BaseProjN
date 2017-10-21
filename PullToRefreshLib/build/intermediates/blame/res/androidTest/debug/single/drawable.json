@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ptr_progress_bar.xml",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\ptr_progress_bar.xml"
+    },
+    {
+        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    }
+]

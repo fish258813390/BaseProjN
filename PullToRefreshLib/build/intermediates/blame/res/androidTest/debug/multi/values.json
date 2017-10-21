@@ -1,0 +1,273 @@
+[
+    {
+        "outputFile": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1706,
+                    "endColumn": 63,
+                    "endOffset": 1765
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1706,
+                        "endColumn": 63,
+                        "endOffset": 1765
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1770,
+                    "endColumn": 63,
+                    "endOffset": 1829
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1770,
+                        "endColumn": 63,
+                        "endOffset": 1829
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1834,
+                    "endColumn": 54,
+                    "endOffset": 1884
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1834,
+                        "endColumn": 54,
+                        "endOffset": 1884
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1889,
+                    "endColumn": 56,
+                    "endOffset": 1941
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1889,
+                        "endColumn": 56,
+                        "endOffset": 1941
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1946,
+                    "endColumn": 54,
+                    "endOffset": 1996
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1946,
+                        "endColumn": 54,
+                        "endOffset": 1996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2001,
+                    "endColumn": 37,
+                    "endOffset": 2034
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2001,
+                        "endColumn": 37,
+                        "endOffset": 2034
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2039,
+                    "endColumn": 39,
+                    "endOffset": 2074
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 2039,
+                        "endColumn": 39,
+                        "endOffset": 2074
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2079,
+                    "endColumn": 36,
+                    "endOffset": 2111
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2079,
+                        "endColumn": 36,
+                        "endOffset": 2111
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2116,
+                    "endColumn": 101,
+                    "endOffset": 2213
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2116,
+                        "endColumn": 101,
+                        "endOffset": 2213
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2218,
+                    "endColumn": 113,
+                    "endOffset": 2327
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 2218,
+                        "endColumn": 113,
+                        "endOffset": 2327
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2332,
+                    "endColumn": 107,
+                    "endOffset": 2435
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2332,
+                        "endColumn": 107,
+                        "endOffset": 2435
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2440,
+                    "endColumn": 71,
+                    "endOffset": 2507
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2440,
+                        "endColumn": 71,
+                        "endOffset": 2507
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2512,
+                    "endColumn": 69,
+                    "endOffset": 2577
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 2512,
+                        "endColumn": 69,
+                        "endOffset": 2577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2582,
+                    "endColumn": 77,
+                    "endOffset": 2655
+                },
+                "from": {
+                    "file": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2582,
+                        "endColumn": 77,
+                        "endOffset": 2655
+                    }
+                }
+            }
+        ]
+    }
+]

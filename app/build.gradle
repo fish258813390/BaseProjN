@@ -41,4 +41,7 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.8'
 
     testCompile 'junit:junit:4.12'
+
+    compile project(':PullToRefreshLib')
+    compile project(':retrofitlibrary')
 }
