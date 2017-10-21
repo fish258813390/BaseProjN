@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeMenuView">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="diameter" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TopBar">
+        <attr name="top_background" format="reference|color" />
+        <attr name="title" format="string" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="drawableLeftVisibility" format="boolean" />
+        <attr name="drawableLeft" format="reference|color" />
+        <attr name="leftTextColor" format="color" />
+        <attr name="leftBackground" format="reference|color" />
+        <attr name="leftText" format="string" />
+        <attr name="leftTextSize" format="dimension" />
+        <attr name="drawableRightVisibility" format="boolean" />
+        <attr name="drawableRight" format="reference|color" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightBackground" format="reference|color" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="paddingRight" format="dimension" />
+    </declare-styleable>
+    <!--自定义圆-->
+    <declare-styleable name="CircleView">
+        <attr name="bg_color" format="color" />
+        <attr name="out_color_start" format="color" />
+        <attr name="out_color_end" format="color" />
+        <attr name="circle_text" format="string" />
+        <attr name="circle_text_color" format="color" />
+        <attr name="circle_text_size" format="dimension" />
+        <attr name="circle_out_sweep_width" format="dimension" />
+
+    </declare-styleable>
+    <!--自定义圆环-->
+    <declare-styleable name="ArcView">
+        <attr name="arc_bg_color" format="color" />
+        <attr name="arc_out_color" format="color" />
+        <attr name="arc_little_color" format="color" />
+        <attr name="arc_out_radius" format="dimension" />
+        <attr name="arc_little_radius" format="dimension" />
+        <attr name="arc_sweep_width" format="dimension" />
+        <attr name="arc_start_angle" format="integer" />
+        <attr name="arc_end_angle" format="integer" />
+        <attr name="arc_text1" format="string" />
+        <attr name="arc_text1_size" format="dimension" />
+        <attr name="arc_text2_size" format="dimension" />
+        <attr name="arc_text2" format="string" />
+        <attr name="arc_text_color" format="color" />
+    </declare-styleable>
+    <!--垂直排列的两个textview-->
+    <declare-styleable name="VeticalDoubleTextView">
+        <attr name="textSizeTop" format="dimension" />
+        <attr name="textColorTop" format="color" />
+        <attr name="textTop" format="string" />
+        <attr name="textBottom" format="string" />
+        <attr name="textSizeBottom" format="dimension" />
+        <attr name="textColorBottom" format="color" />
+        <attr name="textmargin" format="dimension" />
+        <attr name="textdrablepadding" format="dimension" />
+        <attr name="ivleft" format="reference" />
+        <attr name="ivright" format="reference" />
+        <attr name="textGravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="tstyle" format="enum">
+            <enum name="topbold" value="0" />
+            <enum name="bottombold" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--资产统计饼图-->
+    <declare-styleable name="MagnificentChart">
+        <attr name="animation" format="boolean" />
+        <attr name="round" format="boolean" />
+        <attr name="shadow" format="boolean" />
+        <attr name="showTitle" format="boolean" />
+        <attr name="shadowColor" format="color" />
+        <attr name="backgroundd" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ShapeLocker">
+        <attr name="aspect" format="string" />
+        <attr name="color_line" format="color" />
+    </declare-styleable>
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswBackMeasureRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextMarginH" format="dimension" />
+        <attr name="kswAutoAdjustTextPosition" format="boolean" />
+    </declare-styleable>
+    <!--任务条目-->
+    <declare-styleable name="ViewMission">
+        <attr name="icon_mission" format="reference" />
+        <attr name="title_mission" format="string" />
+        <attr name="description_mission" format="string" />
+        <attr name="btn" format="string" />
+        <attr name="btn_bg" format="reference" />
+        <attr name="mission_bg" format="reference" />
+    </declare-styleable>
+
+    <!-- 我的设置 rv_item_store_info -->
+    <declare-styleable name="SettingItemView">
+        <attr name="setting_left_icon" format="reference" />
+        <attr name="setting_left_content" format="string" />
+        <attr name="setting_right_icon" format="reference" />
+        <attr name="setting_right_content" format="string" />
+    </declare-styleable>
+    <!--圆形图片-->
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <declare-styleable name="RoundImageViewByXfermode">
+            <attr name="borderRadius" />
+            <attr name="type" />
+        </declare-styleable>
+
+    <!-- imageview背景切换选择 -->
+    <declare-styleable name="SelectorImageView">
+        <attr name="selector_src" format="reference"/>
+        <attr name="checked" format="boolean"/>
+    </declare-styleable>
+
+</resources>
