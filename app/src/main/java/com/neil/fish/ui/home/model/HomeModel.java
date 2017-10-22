@@ -60,6 +60,7 @@ public class HomeModel extends BaseModel {
     public void getHotSearchByRxAndRetrofit(int page, String showapi_appid, String showapi_sign) {
         HotNewService hotNewService = HttpClient.getService(HotNewService.class);
         Observable<YiyuanApiResult<ResBodyBean>> observable = hotNewService.getHotSearchRank(page, showapi_appid, showapi_sign);
+        // 关联被观察者
         observable.subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<YiyuanApiResult<ResBodyBean>>() {
                     @Override
@@ -86,6 +87,22 @@ public class HomeModel extends BaseModel {
                     }
                 });
 
+    }
+
+
+    // 采用观察者模式对数据进行处理
+    public void getHotSearch(int page, String showapi_appid, String showapi_sign,Observer observer){
+        HotNewService hotNewService = HttpClient.getService(HotNewService.class);
+        Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+
+            }
+        });
+        Observable<YiyuanApiResult<ResBodyBean>> observable = hotNewService.getHotSearchRank(page, showapi_appid, showapi_sign);
+        // subscribeOn 使用http协议获取数据(io操作)
+        observable.subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(observer);
     }
 
 

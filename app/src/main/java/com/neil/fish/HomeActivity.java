@@ -32,7 +32,7 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeModel> impleme
 
     }
 
-    @OnClick({R.id.btn_test, R.id.btn_test1, R.id.btn_test2})
+    @OnClick({R.id.btn_test, R.id.btn_test1, R.id.btn_test2, R.id.btn_test3})
     public void onViewCreated(View view) {
         switch (view.getId()) {
             case R.id.btn_test:
@@ -50,6 +50,10 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeModel> impleme
                 mPresenter.getHotListByRxAndRetrofit(10, "47526", "c05733048bb9427f8ae9b8ede645ff23");
                 break;
 
+            case R.id.btn_test3:
+                LoadingDialog.showDialogForLoading(this);
+                mPresenter.getHotListNew(10, "47526", "c05733048bb9427f8ae9b8ede645ff23");
+                break;
         }
     }
 

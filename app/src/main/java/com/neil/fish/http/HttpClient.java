@@ -97,8 +97,11 @@ public class HttpClient {
             retrofit = new Retrofit
                     .Builder()
                     .baseUrl(getBaseUrl())
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create(gson))  // converter数据转换器 添加 converter 程序将依次询问每一个converter 能否处理一个类型。
+                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) // 如果要使用RxJava 来代替call, 需要添加一个Call Adapter Factory
+                                                            // Call Adapter Factory 是一个知道如何将call 实例转换成其他类型的工厂类。
+                                                            // 目前，只有 RxJava 的类型，也就是将 Call 类型转换成 Observable 类型。
+                                                            // 其实还有一种新的 Observable 类型（一次只发射一个item 的类型）。你可以用这个call adapter factory来转换到其中任意一种 Observable。(官方)
                     .client(httpClient).build();
         }
         return retrofit;

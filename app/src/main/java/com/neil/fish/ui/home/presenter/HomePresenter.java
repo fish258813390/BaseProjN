@@ -2,11 +2,15 @@ package com.neil.fish.ui.home.presenter;
 
 import com.alibaba.fastjson.JSON;
 import com.neil.fish.base.app.BasePresenter;
+import com.neil.fish.base.app.YiyuanApiResult;
 import com.neil.fish.entity.ResBodyBean;
 import com.neil.fish.http.HttpObserver;
 import com.neil.fish.ui.home.model.HomeModel;
 import com.neil.fish.ui.home.view.HomeView;
 import com.neil.fish.utils.LogUtils;
+import com.neil.fish.widget.dialog.LoadingDialog;
+
+import rx.Observer;
 
 /**
  * Created by neil on 2017/10/18 0018.
@@ -43,8 +47,30 @@ public class HomePresenter extends BasePresenter<HomeView, HomeModel> {
     }
 
     // retrofit  + rxjava
-    public void getHotListByRxAndRetrofit(int page, String showapi_appid, String showapi_sign){
-        mModel.getHotSearchByRxAndRetrofit(page,showapi_appid,showapi_sign);
+    public void getHotListByRxAndRetrofit(int page, String showapi_appid, String showapi_sign) {
+        mModel.getHotSearchByRxAndRetrofit(page, showapi_appid, showapi_sign);
+    }
+
+    public void getHotListNew(int page, String showapi_appid, String showapi_sign) {
+        mModel.getHotSearch(page, showapi_appid, showapi_sign, new Observer<YiyuanApiResult<ResBodyBean>>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                LoadingDialog.cancelDialogForLoading();
+                LogUtils.e("获取数据失败:" + e.getMessage());
+            }
+
+            @Override
+            public void onNext(YiyuanApiResult<ResBodyBean> result) {
+                LoadingDialog.cancelDialogForLoading();
+                ResBodyBean resBodyBean = result.getShowapi_res_body();
+                mView.showData(resBodyBean == null ? "获取数据失败" : resBodyBean.toString());
+            }
+        });
     }
 
 }
