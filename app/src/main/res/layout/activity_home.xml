@@ -28,7 +28,11 @@
         android:id="@+id/btn_test3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="retrofit + rxjava(封装new)"  />
+        android:text="retrofit + rxjava(封装new)" />
 
+    <EditText
+        android:id="@+id/et_input_bankcard"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

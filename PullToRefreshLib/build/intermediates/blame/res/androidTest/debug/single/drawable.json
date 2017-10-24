@@ -1,14 +1,14 @@
 [
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ptr_progress_bar.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\ptr_progress_bar.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
     },
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ptr_progress_bar.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\drawable\\ptr_progress_bar.xml"
     }
 ]

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
     },
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
     },
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
     },
     {
-        "merged": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "E:\\droid-as-project\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
+        "merged": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "D:\\code\\droidToGithub\\BaseProjN\\PullToRefreshLib\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
     }
 ]
