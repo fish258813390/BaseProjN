@@ -132,20 +132,29 @@
         <attr name="setting_right_content" format="string" />
     </declare-styleable>
     <!--圆形图片-->
-        <attr name="borderRadius" format="dimension" />
-        <attr name="type">
-            <enum name="circle" value="0" />
-            <enum name="round" value="1" />
-        </attr>
-        <declare-styleable name="RoundImageViewByXfermode">
-            <attr name="borderRadius" />
-            <attr name="type" />
-        </declare-styleable>
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <declare-styleable name="RoundImageViewByXfermode">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
 
     <!-- imageview背景切换选择 -->
     <declare-styleable name="SelectorImageView">
-        <attr name="selector_src" format="reference"/>
-        <attr name="checked" format="boolean"/>
+        <attr name="selector_src" format="reference" />
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBarView">
+        <attr name="circleColor" format="color|reference" />
+        <attr name="sweepColor" format="color|reference" />
+        <attr name="stroke" format="dimension|reference" />
+        <attr name="sweepStep" format="integer|reference" />
+        <attr name="startAngle" format="integer|reference" />
+        <attr name="mypb_padding" format="dimension|reference" />
     </declare-styleable>
 
 </resources>

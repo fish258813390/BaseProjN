@@ -13,7 +13,6 @@ import android.widget.ProgressBar;
  * @author neil
  * @date 2018/1/9
  */
-
 public class ProgressBarView extends ProgressBar {
 
     /**
@@ -95,10 +94,12 @@ public class ProgressBarView extends ProgressBar {
         paint.setColor(sweepColor); // 设置扇形的颜色
         paint.setStyle(Paint.Style.FILL);
         rectF = new RectF(paddding, paddding, getWidth() - paddding, getHeight() - paddding);
-        // 绘制扇形
+        // 绘制扇形 参数一:扇形所在的矩形; 参数二:开始绘制的角度; 参数三:需要绘制的角度;
+        // 参数四:扇形是否和矩形公用一个中心点;
         canvas.drawArc(rectF, startAngle, sweepAngle, true, paint);
-
-
+        sweepAngle += sweepStep; // 增加要绘制的角度
+        sweepAngle = sweepAngle > 360 ? 0 : sweepAngle; // 如果绘制的角度大于360度,则从0开始重新绘制
+        invalidate();
     }
 
     @Override
