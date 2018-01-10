@@ -26,6 +26,8 @@
 
 
         <activity android:name=".ui.sample.ClockActivity"/>
+        <activity android:name=".ui.sample.WebviewActivity"/>
+
 
     </application>
 
