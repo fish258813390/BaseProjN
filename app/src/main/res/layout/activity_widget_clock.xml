@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.neil.fish.widget.ClockView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+
+    <com.neil.fish.widget.ProgressBarView
+        app:circleColor="#10ff03"
+        app:mypb_padding="30dp"
+        app:startAngle="0"
+        app:stroke="10dp"
+        app:sweepColor="#0184ff"
+        app:sweepStep="2"
+        android:layout_width="128dp"
+        android:layout_height="128dp"/>
 
 </LinearLayout>
