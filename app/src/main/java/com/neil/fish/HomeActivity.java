@@ -16,6 +16,7 @@ import com.neil.fish.ui.home.model.HomeModel;
 import com.neil.fish.ui.home.presenter.HomePresenter;
 import com.neil.fish.ui.home.view.HomeView;
 import com.neil.fish.ui.sample.ClockActivity;
+import com.neil.fish.ui.sample.WebviewActivity;
 import com.neil.fish.utils.LogUtils;
 import com.neil.fish.utils.ToastUtils;
 import com.neil.fish.widget.dialog.LoadingDialog;
@@ -97,7 +98,7 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeModel> impleme
         });
     }
 
-    @OnClick({R.id.btn_test, R.id.btn_test1, R.id.btn_test2, R.id.btn_test3, R.id.btn_clock})
+    @OnClick({R.id.btn_test, R.id.btn_test1, R.id.btn_test2, R.id.btn_test3, R.id.btn_clock, R.id.btn_webview})
     public void onViewCreated(View view) {
         switch (view.getId()) {
             case R.id.btn_test:
@@ -122,6 +123,10 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeModel> impleme
 
             case R.id.btn_clock:
                 startActivity(new Intent(HomeActivity.this, ClockActivity.class));
+                break;
+
+            case R.id.btn_webview:
+                startActivity(new Intent(HomeActivity.this, WebviewActivity.class));
                 break;
 
         }
