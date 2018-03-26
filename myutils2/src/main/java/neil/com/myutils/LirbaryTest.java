@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class LirbaryTest {
 
     public static void test(Context context) {
-        Toast.makeText(context, "我是来自Library的", Toast.LENGTH_SHORT);
+        Toast.makeText(context, "我是来自Library的", Toast.LENGTH_SHORT).show();
     }
 
 }
