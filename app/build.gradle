@@ -44,4 +44,5 @@ dependencies {
 
     compile project(':PullToRefreshLib')
     compile project(':retrofitlibrary')
+    compile project(':myutils2')
 }
