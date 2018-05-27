@@ -9,9 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.neil.fish.base.app.BaseActivity;
+import com.neil.fish.base.app.YiyuanApiResult;
 import com.neil.fish.db.AssetsDatabaseManager;
 import com.neil.fish.db.SQLdm;
 import com.neil.fish.entity.BankcardBean;
+import com.neil.fish.entity.ResBodyBean;
+import com.neil.fish.http.HttpClient;
+import com.neil.fish.service.yiyuan.HotNewService;
 import com.neil.fish.ui.home.model.HomeModel;
 import com.neil.fish.ui.home.presenter.HomePresenter;
 import com.neil.fish.ui.home.view.HomeView;
@@ -21,8 +25,18 @@ import com.neil.fish.utils.LogUtils;
 import com.neil.fish.utils.ToastUtils;
 import com.neil.fish.widget.dialog.LoadingDialog;
 
+import java.io.Serializable;
+
 import butterknife.BindView;
 import butterknife.OnClick;
+import rx.Observable;
+import rx.Observer;
+import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Func1;
+import rx.functions.Func2;
+import rx.schedulers.Schedulers;
 
 /**
  * 主页面
@@ -98,7 +112,7 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeModel> impleme
         });
     }
 
-    @OnClick({R.id.btn_test, R.id.btn_test1, R.id.btn_test2, R.id.btn_test3, R.id.btn_clock, R.id.btn_webview})
+    @OnClick({R.id.btn_test, R.id.btn_test1, R.id.btn_test2, R.id.btn_test3, R.id.btn_clock, R.id.btn_webview, R.id.btn_error})
     public void onViewCreated(View view) {
         switch (view.getId()) {
             case R.id.btn_test:
@@ -129,7 +143,184 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeModel> impleme
                 startActivity(new Intent(HomeActivity.this, WebviewActivity.class));
                 break;
 
+            case R.id.btn_error:
+                testRxjavaError();
+                break;
+
         }
+    }
+
+
+    private void testRxjavaError() {
+
+        Observable<String> observable1 = Observable.just("zhangsan").onErrorReturn(new Func1<Throwable, String>() {
+            @Override
+            public String call(Throwable throwable) {
+                return "zhangsan is wrong";
+            }
+        });
+
+        HotNewService hotNewService = HttpClient.getService(HotNewService.class);
+        Observable<YiyuanApiResult<ResBodyBean>> observable = hotNewService
+                .getHotSearchRank(10, "47526", "c05733048bb9427f8ae9b8ede645ff23")
+                .subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        // 关联被观察者
+//        observable.subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Subscriber<YiyuanApiResult<ResBodyBean>>() {
+//                    @Override
+//                    public void onCompleted() {
+//                        LoadingDialog.cancelDialogForLoading();
+//                        LogUtils.e("请求完成了----end");
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        LoadingDialog.cancelDialogForLoading();
+//                        LogUtils.e("异常了---->" + e.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onNext(YiyuanApiResult<ResBodyBean> resBodyBeanYiyuanApiResult) {
+//                        LogUtils.d("当前线程:" + Thread.currentThread().getName());
+//                        LogUtils.e("相应数据：---->" + resBodyBeanYiyuanApiResult.toString());
+//                    }
+//
+//                    @Override
+//                    public void onStart() {
+//                        LogUtils.e("请求开始----start");
+//                    }
+//                });
+
+
+        Observable<Integer> observable2 = Observable.just(10000).onErrorReturn(new Func1<Throwable, Integer>() {
+            @Override
+            public Integer call(Throwable throwable) {
+                return 10000;
+            }
+        });
+
+        final String[] str = new String[1];
+        Observable.zip(observable, observable2, new Func2<YiyuanApiResult<ResBodyBean>, Integer, Object>() {
+            @Override
+            public Object call(YiyuanApiResult<ResBodyBean> resBodyBeanYiyuanApiResult, Integer integer) {
+                if (resBodyBeanYiyuanApiResult != null) {
+                    return resBodyBeanYiyuanApiResult.hashCode() + "-----" + integer;
+                } else {
+                    return integer;
+                }
+            }
+        }).subscribe(new Subscriber<Object>() {
+
+            @Override
+            public void onCompleted() {
+                LogUtils.d("当前线程:" + Thread.currentThread().getName());
+                LogUtils.d("zip接收值onCompleted" + str);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                LogUtils.d("zip接收值onError：" + e.getMessage());
+                str[0] = "error is happend";
+                onCompleted();
+            }
+
+            @Override
+            public void onNext(Object result) {
+                str[0] = result + "";
+                LogUtils.d("zip接收值:" + result);
+            }
+        });
+
+//        Observable.merge(observable, observable2)
+//                .subscribe(new Subscriber<Object>() {
+//                    @Override
+//                    public void onCompleted() {
+//                        LogUtils.d("merge接收值onCompleted");
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        LogUtils.d("merge接收值onError：" + e.getMessage());
+//                    }
+//
+//                    @Override
+//                    public void onNext(Object result) {
+////                        if (result instanceof Integer) {
+////                            throw new NullPointerException("observable1");
+//////                            LogUtils.d("merge接收值Integer：" + result);
+////                        } else if (result instanceof String) {
+////                            throw new NullPointerException("observable2");
+//////                            LogUtils.d("merge接收值String：" + result);
+////                        }
+//                        LogUtils.d("merge接收值:" + result);
+//
+//                    }
+//                });
+
+//        Observable.zip(observable1, observable2, new Func2<String, Integer, String>() {
+//            @Override
+//            public String call(String s, Integer integer) {
+//
+//                LogUtils.d("接收值" + s + ",,,," + integer);
+//                String builder = s + "+" + integer + "";
+//                if (1 != 2) {
+//                    throw new NullPointerException("11111");
+//                }
+//                return builder;
+//            }
+//        }).onErrorReturn(new Func1<Throwable, String>() {
+//            @Override
+//            public String call(Throwable throwable) {
+//                LogUtils.d("zip异常：" + "-------");
+//                return null;
+//            }
+//        }).subscribe(new Observer<String>() {
+//            @Override
+//            public void onCompleted() {
+//                LogUtils.d("onCompleted");
+//            }
+//
+//            @Override
+//            public void onError(Throwable e) {
+//                LogUtils.d("onError");
+//            }
+//
+//            @Override
+//            public void onNext(String s) {
+//                LogUtils.d("合并接收值" + s);
+//            }
+//        });
+
+
+//        Observable.create(new Observable.OnSubscribe<Integer>(){
+//
+//            @Override
+//            public void call(Subscriber<? super Integer> subscriber) {
+//                subscriber.onNext(1);
+//            }
+//        }).onErrorReturn(new Func1<Throwable, Integer>() {
+//            @Override
+//            public Integer call(Throwable throwable) {
+//                return null;
+//            }
+//        }).subscribe(new Observer<Integer>() {
+//            @Override
+//            public void onCompleted() {
+//
+//            }
+//
+//            @Override
+//            public void onError(Throwable e) {
+//
+//            }
+//
+//            @Override
+//            public void onNext(Integer integer) {
+//
+//            }
+//        });
+
+
     }
 
     @Override
